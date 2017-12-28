@@ -5,11 +5,14 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+	Plug 'tpope/vim-fugitive'
 	Plug 'scrooloose/nerdtree'
 	Plug 'kien/ctrlp.vim'	
 	Plug 'bling/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 	Plug 'fatih/vim-go'
 call plug#end()
 
+let g:airline_powerline_fonts = 1
 set tabstop=4
 map <C-n> :NERDTreeToggle<CR>
