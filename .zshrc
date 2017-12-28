@@ -4,6 +4,10 @@ export PATH="${PATH}:${GOPATH}/bin"
 export XKB_DEFAULT_LAYOUT=no
 
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
+alias dgst='dgit status'
+alias dgl='dgit log'
+alias dga='dgit add'
+alias dgci='dgit commit'
 
 source ${HOME}/.config/antigen/antigen.zsh
 
