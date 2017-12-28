@@ -11,8 +11,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'bling/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'fatih/vim-go'
+	Plug 'flazz/vim-colorschemes'
 call plug#end()
 
+colorscheme 1989 
 let g:airline_powerline_fonts = 1
 set tabstop=4
 map <C-n> :NERDTreeToggle<CR>
