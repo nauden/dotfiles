@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'flazz/vim-colorschemes'
 call plug#end()
 
-colorscheme 1989 
+colorscheme 256-grayvim 
 let g:airline_powerline_fonts = 1
 set tabstop=4
 map <C-n> :NERDTreeToggle<CR>
