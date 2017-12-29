@@ -18,7 +18,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle golang
 antigen bundle git
-# antigen theme agnoster
+antigen bundle yarn
 
 antigen theme simple
 

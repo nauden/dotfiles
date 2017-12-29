@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'fatih/vim-go'
 	Plug 'flazz/vim-colorschemes'
+	Plug 'posva/vim-vue'
 call plug#end()
 
 colorscheme 256-grayvim 
