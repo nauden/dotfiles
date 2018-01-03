@@ -9,7 +9,7 @@ alias dgl='dgit log'
 alias dga='dgit add'
 alias dgci='dgit commit'
 
-source ${HOME}/.config/antigen/antigen.zsh
+source /usr/share/zsh/share/antigen.zsh
 
 antigen use oh-my-zsh
 
