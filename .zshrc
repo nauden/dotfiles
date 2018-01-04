@@ -1,6 +1,6 @@
 export DEFAULT_USER="nauden"
 export GOPATH="${HOME}/go"
-export PATH="${PATH}:${GOPATH}/bin"
+export PATH="${PATH}:${HOME}/bin:${GOPATH}/bin"
 export XKB_DEFAULT_LAYOUT=no
 
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'

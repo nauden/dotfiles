@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'fatih/vim-go'
 	Plug 'flazz/vim-colorschemes'
 	Plug 'posva/vim-vue'
+	Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 colorscheme 256-grayvim 
