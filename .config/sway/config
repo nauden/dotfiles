@@ -57,6 +57,8 @@ font "DejaVu Sans Mono 10"
 default_border pixel 2 
 default_floating_border normal
 
+for_window [class="qutebrowser"] border none
+
 set orange  #f47d41
 set green   #cbf442
 set blue    #3f4de2
