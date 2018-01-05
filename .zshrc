@@ -2,6 +2,7 @@ export DEFAULT_USER="nauden"
 export GOPATH="${HOME}/go"
 export PATH="${PATH}:${HOME}/bin:${GOPATH}/bin"
 export XKB_DEFAULT_LAYOUT=no
+export VISUAL=vim
 
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias dgst='dgit status'

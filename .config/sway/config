@@ -14,8 +14,8 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term urxvt
-#set $term termite
+#set $term urxvt
+set $term critty
 # Your preferred application launcher
 # set $menu dmenu_run
 set $menu j4-dmenu-desktop 
