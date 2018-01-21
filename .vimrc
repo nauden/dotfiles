@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-fugitive'
 	Plug 'scrooloose/nerdtree'
-	Plug 'kien/ctrlp.vim'	
+	Plug 'kien/ctrlp.vim'
 	Plug 'bling/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'fatih/vim-go'
@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'plasticboy/vim-markdown'
 	Plug 'rakr/vim-one'
 	Plug 'nlknguyen/papercolor-theme'
+	Plug 'cespare/vim-toml'
 call plug#end()
 
 set background=dark
@@ -26,3 +27,5 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='papercolor'
 set tabstop=4
 map <C-n> :NERDTreeToggle<CR>
+
+let g:lsc_server_commands = {'rust': 'rls-preview'}

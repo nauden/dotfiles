@@ -3,12 +3,15 @@ export GOPATH="${HOME}/go"
 export PATH="${PATH}:${HOME}/bin:${GOPATH}/bin"
 export XKB_DEFAULT_LAYOUT=no
 export VISUAL=vim
+export EDITOR=${VISUAL}
 
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias dgst='dgit status'
 alias dgl='dgit log'
 alias dga='dgit add'
 alias dgci='dgit commit'
+
+alias open='xdg-open'
 
 source /usr/share/zsh/share/antigen.zsh
 

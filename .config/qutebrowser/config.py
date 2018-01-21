@@ -710,7 +710,7 @@ config.load_autoconfig()
 ## The editor (and arguments) to use for the `open-editor` command. `{}`
 ## gets replaced by the filename of the file to be edited.
 ## Type: ShellCommand
-# c.editor.command = ['gvim', '-f', '{}']
+# c.editor.command = ['urxvt', '-e', 'vim {}']
 
 ## Encoding to use for the editor.
 ## Type: Encoding
@@ -734,7 +734,7 @@ config.load_autoconfig()
 
 ## Font used for the hints.
 ## Type: Font
-c.fonts.hints = 'bold 8pt monospace'
+c.fonts.hints = 'bold 14pt monospace'
 
 ## Font used in the keyhint widget.
 ## Type: Font

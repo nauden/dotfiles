@@ -14,16 +14,17 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
+set $term st
 #set $term urxvt
-set $term critty
+#set $term critty
 # Your preferred application launcher
 # set $menu dmenu_run
-set $menu j4-dmenu-desktop 
+set $menu j4-dmenu-desktop
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Desktop/wall.jpg fill
+output * bg ~/Desktop/wall2.jpg fill
 
 #
 # Example configuration:
@@ -46,7 +47,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-#input  "2:14:ETPS/2_Elantech_Touchpad" { 
+#input  "2:14:ETPS/2_Elantech_Touchpad" {
 #	dwt enabled
 #       	tap enabled
 #       	natural_scroll enabled
@@ -54,7 +55,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 #}
 
 font "DejaVu Sans Mono 10"
-default_border pixel 2 
+default_border pixel 2
 default_floating_border normal
 
 for_window [class="qutebrowser"] border none
@@ -67,8 +68,8 @@ set black   #000000
 set white   #ffffff
 set gray    #afafaf
 
-#              border bg     text  ind     child_border  
-client.focused $green $black $gray $orange $green
+#              border bg     text  ind     child_border
+client.focused $green $gray  $gray $orange $green
 
 
 
