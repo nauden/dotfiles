@@ -8,7 +8,7 @@ path = "/"
 alias = "/"
 info_type = "available"
 unit = "GB"
-interval = 20
+interval = 120
 warning = 20.0
 alert = 10.0
 
@@ -35,11 +35,13 @@ block = "temperature"
 block = "net"
 device = "wlp3s0"
 ssid = true
-ip = true
+ip = false
 speed_up = false
+speed_down = false
+graph_down = true
 interval = 5
 
 [[block]]
 block = "time"
-interval = 60
+interval = 10
 format = "%a %d/%m %R"
