@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# vi set ft=sh
+
+if [ $QUTE_MODE = "command" ]; then
+	echo $1 > /tmp/qlpasshost
+	echo "hint inputs userscript lpass" >> $QUTE_FIFO
+	exit
+fi
+
+HOST=$(</tmp/qlpasshost)
+rm /tmp/qlpasshost
+# BASE=$(echo $HOST | cut -d. -f1)
+
+ACCOUNTS=($(lpass ls --format "%ai %al" | grep $HOST | cut -d " " -f 1 | tr '\n' ' '))
+
+if [ ${#ACCOUNTS[@]} -eq 0 ]; then
+		echo "message-error 'No login saved for $HOST'" >> $QUTE_FIFO
+		exit
+fi
+
+ID=${ACCOUNTS[0]}
+L=$(lpass show -u $ID)
+A="$HOST: $L $ID"
+
+if [ ${#ACCOUNTS[@]} -gt 1 ]; then
+		for id in ${ACCOUNTS[@]:1:10000}; do
+				L=$(lpass show -u $id)
+				A+="\n$HOST: $L $id"
+		done
+		C=$(echo -e $A | rofi -dmenu)
+		ID=$(echo $C | cut -d" " -f3)
+		L=$(echo $C | cut -d" " -f2)
+fi
+
+echo "enter-mode insert ;; fake-key <Ctrl-a> ;; fake-key $L ;; fake-key <Tab>" >> $QUTE_FIFO
+
+lpass show -p -c $ID
+
+echo "fake-key <Ctrl-v>" >> $QUTE_FIFO

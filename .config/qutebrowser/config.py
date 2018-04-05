@@ -710,7 +710,8 @@ config.load_autoconfig()
 ## The editor (and arguments) to use for the `open-editor` command. `{}`
 ## gets replaced by the filename of the file to be edited.
 ## Type: ShellCommand
-# c.editor.command = ['urxvt', '-e', 'vim {}']
+c.editor.command = ['st', '-e', 'nvim', '{}']
+# c.editor.command = ['gonvim', '{}']
 
 ## Encoding to use for the editor.
 ## Type: Encoding
@@ -1297,6 +1298,7 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}',
 
 ## Bindings for normal mode
 config.bind(';s', 'hint links spawn stig add {hint-url}')
+config.bind(';l', 'spawn -u lpass {url:host}')
 # config.bind("'", 'enter-mode jump_mark')
 # config.bind('+', 'zoom-in')
 # config.bind('-', 'zoom-out')
