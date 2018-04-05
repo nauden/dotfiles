@@ -22,6 +22,11 @@ format_swap = "{SUp}%"
 block = "cpu"
 interval = 1
 
+#[[block]]
+#block = "custom"
+#command = "uptime"
+#interval = 10
+
 [[block]]
 block = "sound"
 
@@ -37,8 +42,8 @@ device = "wlp3s0"
 ssid = true
 ip = false
 speed_up = false
-speed_down = false
-graph_down = true
+speed_down = true
+graph_down = false
 interval = 5
 
 [[block]]

@@ -19,13 +19,17 @@ set $term st
 #set $term critty
 # Your preferred application launcher
 # set $menu dmenu_run
-set $menu j4-dmenu-desktop
+# set $menu j4-dmenu-desktop --dmenu="rofi -i -dmenu"
+set $menu rofi -modi drun -show drun -show-icons -normal-window
 
+focus_follows_mouse no
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Desktop/wall2.jpg fill
+# output * bg ~/Desktop/wall2.jpg fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1366x768.png fill
 
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # Example configuration:
 #
@@ -59,6 +63,8 @@ default_border pixel 2
 default_floating_border normal
 
 for_window [class="qutebrowser"] border none
+
+for_window [class="Rofi"] floating enable, border none, resize set 288 180
 
 set orange  #f47d41
 set green   #cbf442
