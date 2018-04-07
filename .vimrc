@@ -61,7 +61,7 @@ let g:deoplete#sources#go#gocode_binary	= $GOPATH.'/bin/gocode'
 set background=dark
 colorscheme base16-tomorrow-night
 let g:airline_powerline_fonts = 1
-let g:airline_theme='papercolor'
+let g:airline_theme='base16_tomorrow'
 " map <C-n> :NERDTreeToggle<CR>
 
 let g:lsc_server_commands = {'rust': 'rls-preview'}
