@@ -1229,7 +1229,7 @@ c.fonts.hints = 'bold 14pt monospace'
 ## The page to open if :open -t/-b/-w is used without URL. Use
 ## `about:blank` for a blank page.
 ## Type: FuzzyUrl
-# c.url.default_page = 'https://start.duckduckgo.com/'
+c.url.default_page = 'https://new.startpage.com'
 
 ## The URL segments where `:navigate increment/decrement` will search for
 ## a number.
@@ -1250,8 +1250,10 @@ c.fonts.hints = 'bold 14pt monospace'
 ## used by prepending the search engine name to the search term, e.g.
 ## `:open google qutebrowser`.
 ## Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}',
+c.url.searchengines = {'DEFAULT': 'https://new.startpage.com/do/search?lui=english&language=english&cat=web&query={}',
         'yt': 'https://youtube.com/results?search_query={}',
+        'om': 'https://man.openbsd.org/{}',
+        'sp': 'https://new.startpage.com/do/search?lui=english&language=english&cat=web&query={}',
         'aw': 'https://wiki.archlinux.org/index.php?search={}',
         'pj': 'https://www.prisjakt.no/#rparams=ss={}'}
 

@@ -22,11 +22,6 @@ format_swap = "{SUp}%"
 block = "cpu"
 interval = 1
 
-#[[block]]
-#block = "custom"
-#command = "uptime"
-#interval = 10
-
 [[block]]
 block = "sound"
 
