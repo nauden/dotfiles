@@ -18,7 +18,7 @@ config.load_autoconfig()
 
 ## Always restore open sites when qutebrowser is reopened.
 ## Type: Bool
-# c.auto_save.session = False
+c.auto_save.session = True
 
 ## The backend to use to display websites. qutebrowser supports two
 ## different web rendering engines / backends, QtWebKit and QtWebEngine.
@@ -1086,7 +1086,7 @@ c.fonts.hints = 'bold 14pt monospace'
 
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
-# c.tabs.background = False
+c.tabs.background = True
 
 ## On which mouse button to close tabs.
 ## Type: String
@@ -1301,6 +1301,7 @@ c.url.searchengines = {'DEFAULT': 'https://new.startpage.com/do/search?lui=engli
 ## Bindings for normal mode
 config.bind(';s', 'hint links spawn stig add {hint-url}')
 config.bind(';l', 'spawn -u lpass {url:host}')
+# config.bind(';e', ':open {url}')
 # config.bind("'", 'enter-mode jump_mark')
 # config.bind('+', 'zoom-in')
 # config.bind('-', 'zoom-out')
@@ -1308,6 +1309,7 @@ config.bind(';l', 'spawn -u lpass {url:host}')
 # config.bind('/', 'set-cmd-text /')
 # config.bind(':', 'set-cmd-text :')
 # config.bind(';I', 'hint images tab')
+config.bind(';I', 'hint images fill :open -t {hint-url}')
 # config.bind(';O', 'hint links fill :open -t -r {hint-url}')
 # config.bind(';R', 'hint --rapid links window')
 # config.bind(';Y', 'hint links yank-primary')

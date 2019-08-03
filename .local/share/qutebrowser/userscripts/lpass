@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # vi set ft=sh
 
@@ -11,6 +11,8 @@ fi
 HOST=$(</tmp/qlpasshost)
 rm /tmp/qlpasshost
 # BASE=$(echo $HOST | cut -d. -f1)
+
+lpass status &> /dev/null || lpass login nauden@gmail.com &> /dev/null
 
 ACCOUNTS=($(lpass ls --format "%ai %al" | grep $HOST | cut -d " " -f 1 | tr '\n' ' '))
 
@@ -33,8 +35,13 @@ if [ ${#ACCOUNTS[@]} -gt 1 ]; then
 		L=$(echo $C | cut -d" " -f2)
 fi
 
-echo "enter-mode insert ;; fake-key <Ctrl-a> ;; fake-key $L ;; fake-key <Tab>" >> $QUTE_FIFO
+# echo "enter-mode insert ;; fake-key <Ctrl-a> ;; fake-key $L ;; fake-key <Tab>" >> $QUTE_FIFO
+echo "enter-mode insert" >> $QUTE_FIFO 
+echo "fake-key <Ctrl-a>" >> $QUTE_FIFO
+echo "fake-key $L" >> $QUTE_FIFO
+echo "fake-key <Tab>" >> $QUTE_FIFO
 
-lpass show -p -c $ID
+PW=$(lpass show -p $ID)
 
-echo "fake-key <Ctrl-v>" >> $QUTE_FIFO
+echo "fake-key <Ctrl-a>" >> $QUTE_FIFO
+echo "fake-key $PW" >> $QUTE_FIFO

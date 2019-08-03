@@ -6,10 +6,11 @@ alias dgci='dgit commit'
 
 alias open='xdg-open'
 alias v='nvim'
+alias vim='nvim'
 
-export DEFAULT_USER="nauden"
+export DEFAULT_USER="te"
 export GOPATH="${HOME}/go"
-export PATH="${PATH}:${HOME}/bin:${GOPATH}/bin"
+export PATH="${PATH}:${HOME}/bin:${GOPATH}/bin:${HOME}/.npm-global/bin"
 export XKB_DEFAULT_LAYOUT=no
 export VISUAL=nvim
 export EDITOR=${VISUAL}
