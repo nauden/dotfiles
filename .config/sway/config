@@ -53,7 +53,9 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 input "1:1:AT_Translated_Set_2_keyboard" {
 	xkb_layout no
 #xkb_variant ,nodeadkeys
-		xkb_options caps:escape
+	xkb_options caps:escape
+	repeat_delay 300
+	repeat_rate 40
 }
 
 #
@@ -67,7 +69,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 #       	middle_emulation enabled
 #}
 
-font "DejaVu Sans Mono 10"
+font "FantasqueSansMono Nerd Font 10"
 default_border pixel 2
 default_floating_border normal
 
@@ -83,8 +85,8 @@ set $black   #000000
 set $white   #ffffff
 set $gray    #afafaf
 
-#              border bg     text  ind     child_border
-client.focused $green $gray  $black $orange $green
+#              border		bg			text		ind				child_border
+client.focused $green 	$white	$black	$orange		$green
 
 
 
