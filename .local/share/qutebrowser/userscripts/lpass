@@ -36,7 +36,7 @@ if [ ${#ACCOUNTS[@]} -gt 1 ]; then
 fi
 
 # echo "enter-mode insert ;; fake-key <Ctrl-a> ;; fake-key $L ;; fake-key <Tab>" >> $QUTE_FIFO
-echo "enter-mode insert" >> $QUTE_FIFO 
+echo "enter-mode insert" >> $QUTE_FIFO
 echo "fake-key <Ctrl-a>" >> $QUTE_FIFO
 echo "fake-key $L" >> $QUTE_FIFO
 echo "fake-key <Tab>" >> $QUTE_FIFO
