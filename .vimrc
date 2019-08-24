@@ -75,6 +75,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'leafgarland/typescript-vim'
 	Plug 'nanotech/jellybeans.vim'
 	Plug 'ap/vim-css-color'
+	Plug 'pbrisbin/vim-syntax-shakespeare'
 call plug#end()
 
 " disable markdown folding
